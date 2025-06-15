@@ -1,0 +1,354 @@
+:root {
+    --dota-red: #e03c2a;
+    --dota-dark: #0e0c15;
+    --dota-gold: #c5a46d;
+    --dota-green: #2e8b57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    font-family: 'Radiance', sans-serif;
+    overflow-x: hidden;
+}
+
+.arc_warden {
+    background: linear-gradient(to right, #8c6099, #2a4b6f);
+}
+
+.arc_warden_title {
+    color: #bca6ff;
+    text-shadow: 0px 0px 5px #bca6ff;
+}
+
+.dark-willow {
+    background: linear-gradient(to right, #3e2856, #21152d);
+}
+
+.dark-willow_title {
+    color: #a34df3;
+    text-shadow: 0px 0px 5px #a34df3;
+}
+
+.enigma {
+    background: linear-gradient(to right, #280e5f, #040025);
+}
+
+.enigma_title {
+    color: #561ad5;
+    text-shadow: 0px 0px 5px #561ad5;
+}
+
+.faceless_void {
+    background: linear-gradient(to right, #623a97, #26053f);
+}
+
+.faceless_void_title {
+    color: #9f29fa;
+    text-shadow: 0px 0px 5px #9f29fa;
+}
+
+.juggernaut {
+    background: linear-gradient(to right, #d77534, #b82500);
+}
+
+.juggernaut_title {
+    color: #ff9720;
+    text-shadow: 0px 0px 5px #ff9720;
+}
+
+.morphling {
+    background: linear-gradient(to right, #355576, #151d30);
+}
+
+.morphling_title {
+    color: #51b9ff;
+    text-shadow: 0px 0px 5px #51b9ff;
+}
+
+.nevermore {
+    background: linear-gradient(to right, #7a0e08, #250100);
+}
+
+.nevermore_title {
+    color: #b31919;
+    text-shadow: 0px 0px 5px #b31919;
+}
+
+.phantom_assassin {
+    background: linear-gradient(to right, #4b6a9a, #14203c);
+}
+
+.phantom_assassin_title {
+    color: #4688ec;
+    text-shadow: 0px 0px 5px #4688ec;
+}
+
+.spectre {
+    background: linear-gradient(to right, #912b97, #1d021f);
+}
+
+.spectre_title {
+    color: #e89eff;
+    text-shadow: 0px 0px 5px #e89eff;
+}
+
+.storm_spirit {
+    background: linear-gradient(to right, #28a6aa, #004848);
+}
+
+.storm_spirit_title {
+    color: #1bf7ff;
+    text-shadow: 0px 0px 5px #1bf7ff;
+}
+
+.void_spirit {
+    background: linear-gradient(to right, #9a13e3, #2b0149);
+}
+
+.void_spirit_title {
+    color: #c14eff;
+    text-shadow: 0px 0px 5px #c14eff;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(to right, #000000, #1e0d0d);
+    padding: 12px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--dota-red);
+    box-shadow: 0 0 15px rgba(224, 60, 42, 0.3);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Friz Quadrata', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dota-gold);
+    text-shadow: 0 0 8px rgba(197, 164, 109, 0.5);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--dota-red);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #d9d5c5;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: var(--dota-gold);
+    text-shadow: 0 0 8px rgba(197, 164, 109, 0.5);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 10px;
+    width: 0;
+    height: 2px;
+    background: var(--dota-red);
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: calc(100% - 20px);
+}
+
+/* Страница героя */
+.hero-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.hero-bg {
+    background: radial-gradient(circle, #00000000 50%, #000000ca 130%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-character {
+    width: 50%;
+    max-width: 600px;
+    height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    z-index: 1;
+    opacity: 0.9;
+}
+
+.hero-description {
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #ffc45f;
+    text-shadow: 0px 0px 3px #ffb300;
+    font-family: 'Friz Quadrata', serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    right: 300px;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.hero-info {
+    padding: 40px;
+    width: 500px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-family: 'Friz Quadrata', serif;
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    color: #febb47;
+    text-shadow: 0px 0px 3px #ffb300;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.hero-skills {
+    margin: 20px 0px;
+    display: flex;
+    gap: 15px;
+}
+
+.skill {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hero-roles {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.role {
+    background: rgba(138, 43, 226, 0.2);
+    color: #ffc45f;
+    text-shadow: 0px 0px 3px #ffb300;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Анимации */
+@keyframes fadeInInfo {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-character {
+    animation: fadeInInfo 1.5s ease-out;
+}
+
+@keyframes fadeInAnim {
+    from { opacity: 0; transform: translateY(-100px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-bg-video {
+    animation: fadeInAnim 0.8s ease-in-out;
+}
+  
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .hero-character {
+        left: 5%;
+        width: 40%;
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-character {
+        display: none;
+    }
+    
+    .hero-content {
+        justify-content: center;
+    }
+    
+    .hero-info {
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-subtitle {
+        font-size: 20px;
+    }
+}
